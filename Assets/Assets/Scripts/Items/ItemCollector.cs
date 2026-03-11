@@ -6,17 +6,22 @@ namespace Items
     {
         private PlayerReferences _playerReferences;
 
-        private void Start()
+        private void Awake()
         {
             _playerReferences = GetComponent<PlayerReferences>();
         }
-        private void OnTriggerEnter(Collider collision)
+
+        private void OnTriggerEnter2D(Collider2D collision)
         {
             ItemBase item = collision.GetComponent<ItemBase>();
-            if (item != null && _playerReferences != null)
+            if (item != null)
             {
-                item.OnCollected(_playerReferences);
+                if (_playerReferences != null)
+                {
+                    item.OnCollected(_playerReferences);
+                }
             }
         }
+        public PlayerReferences GetPlayerReferences() => _playerReferences;
     }
 }

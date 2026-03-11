@@ -13,14 +13,11 @@ namespace Player
         public PlayerData GetPlayerData() => _playerData;
         public Inventory GetInventory() => _inventory;
 
-        private void OnValidate()
+        private void Awake()
         {
-            if (_playerController == null)
-                _playerController = GetComponent<PlayerController>();
-            if (_playerData == null)
-                _playerData = GetComponent<PlayerData>();
-            if (_inventory == null)
-                _inventory = GetComponent<Inventory>();
+            _playerController = GetComponent<PlayerController>();
+            _playerData = GetComponent<PlayerData>();
+            _inventory = GetComponent<Inventory>();
         }
     }
 }

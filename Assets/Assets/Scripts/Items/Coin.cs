@@ -1,4 +1,6 @@
 ﻿using Player;
+using UnityEngine;
+
 namespace Items
 {
     public class Coin : ItemBase
@@ -7,7 +9,12 @@ namespace Items
         {
             if (playerReferences != null)
             {
-              playerReferences.GetInventory().AddCoins(1);
+                PlayerData playerData = playerReferences.GetPlayerData();
+                if (playerData != null)
+                {
+                    playerData.AddScore(1);
+                    Debug.Log("Zebrałem monetę! Razem: " + playerData.GetScore());
+                }
             }
             Destroy(gameObject);
         }

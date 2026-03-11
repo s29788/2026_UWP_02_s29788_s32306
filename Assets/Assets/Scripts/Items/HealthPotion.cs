@@ -8,14 +8,10 @@ namespace Items
 
         public override void OnCollected(PlayerReferences playerReferences)
         {
-           
             if (playerReferences != null)
             {
-                if (playerReferences != null)
-                {
-                   
-                    playerReferences.GetPlayerData().AddHp(healthAmount);
-                }
+
+                playerReferences.GetPlayerData().AddHp(healthAmount);
             }
             Destroy(gameObject);
         }

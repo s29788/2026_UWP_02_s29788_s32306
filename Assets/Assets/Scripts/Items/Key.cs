@@ -11,9 +11,6 @@ namespace Items
                 playerReferences.GetInventory().AddKey(this);
             }
             GetComponent<Renderer>().enabled = false;
-            GetComponent<Collider>().enabled = false;
         }
     }
 }
-
-
