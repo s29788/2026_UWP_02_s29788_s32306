@@ -3,22 +3,19 @@ using UnityEngine;
 
 namespace Items
 {
-    public class ItemBase : MonoBehaviour, IInteractable
+    public abstract class ItemBase : MonoBehaviour
     {
         [SerializeField] private PlayerController player;
         void Update()
         {
             float distance = Vector3.Distance(player.transform.position, transform.position);
 
-            if (distance < 1f)
+            if (distance <= 1f)
             {
                 Interact();
             }
         }
 
-        public void Interact()
-        {
-            
-        }
+        public abstract void Interact();
     }
 }
