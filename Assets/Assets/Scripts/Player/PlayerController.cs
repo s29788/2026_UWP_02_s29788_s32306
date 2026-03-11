@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.InputSystem; 
 
 namespace Player
 {
@@ -15,8 +15,19 @@ namespace Player
             {
                 transform.position += Vector3.right * (_speed * Time.deltaTime);
             }
+            if (Keyboard.current.aKey.isPressed)
+            {
+                transform.position += Vector3.left * (_speed * Time.deltaTime);
+            }
 
-            
+            if (Keyboard.current.wKey.isPressed)
+            {
+                transform.position += Vector3.up * (_speed * Time.deltaTime);
+            }
+            if (Keyboard.current.sKey.isPressed)
+            {
+                transform.position += Vector3.down * (_speed * Time.deltaTime);
+            }
             if (target != null)
             {
                 target.transform.position = Vector3.zero;
