@@ -10,8 +10,12 @@ namespace Items
         {
             if (playerReferences != null)
             {
-
-                playerReferences.GetPlayerData().AddHp(healthAmount);
+                PlayerData playerData = playerReferences.GetPlayerData();
+                if (playerData != null)
+                {
+                    playerReferences.GetPlayerData().AddHp(healthAmount);
+                    Debug.Log("Leczenie! hp: " + playerData.GetHp());
+                }
             }
             Destroy(gameObject);
         }

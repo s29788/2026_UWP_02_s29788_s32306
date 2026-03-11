@@ -9,6 +9,7 @@ namespace Items
             if (playerReferences != null)
             {
                 playerReferences.GetInventory().AddKey(this);
+                Debug.Log("Zebrano klucz");
             }
             GetComponent<Renderer>().enabled = false;
         }

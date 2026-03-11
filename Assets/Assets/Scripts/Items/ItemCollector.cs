@@ -11,7 +11,7 @@ namespace Items
             _playerReferences = GetComponent<PlayerReferences>();
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter(Collider collision)
         {
             ItemBase item = collision.GetComponent<ItemBase>();
             if (item != null)
