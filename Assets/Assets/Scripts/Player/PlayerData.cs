@@ -1,8 +1,11 @@
-namespace Game.Player.Data
+using UnityEngine;
+using System; 
+namespace Player
 {
-	[Serializable]
+    [Serializable] 
     public class PlayerData
     {
         public int score;
+
     }
 }
