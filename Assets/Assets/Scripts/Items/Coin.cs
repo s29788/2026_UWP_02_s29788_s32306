@@ -1,10 +1,15 @@
-﻿namespace Items
+﻿using Player;
+namespace Items
 {
     public class Coin : ItemBase
     {
-        override public void Interact()
+        public override void OnCollected(PlayerReferences playerReferences)
         {
-            
+            if (playerReferences != null)
+            {
+              playerReferences.GetInventory().AddCoins(1);
+            }
+            Destroy(gameObject);
         }
     }
 }

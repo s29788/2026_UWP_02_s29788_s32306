@@ -1,5 +1,4 @@
 using UnityEngine;
-
 namespace Player
 {
 	[CreateAssetMenu(menuName="Player/New Player")]
