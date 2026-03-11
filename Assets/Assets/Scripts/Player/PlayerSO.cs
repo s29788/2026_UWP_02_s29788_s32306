@@ -3,9 +3,9 @@ using UnityEngine;
 namespace Player
 {
 	[CreateAssetMenu(menuName="Player/New Player")]
-	public class player_so : ScriptableObject
+	public class PlayerSO : ScriptableObject
 	{
-	    public string playername;
-	    public int player_Score;
+	    public string playerName;
+	    public int playerScore;
 	}
 }
