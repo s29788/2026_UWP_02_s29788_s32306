@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
+
 namespace Items
 {
-    public class Inventory
+    public class Inventory : MonoBehaviour
     {
         private int _coins = 0;
         private List<Key> _keys = new List<Key>();

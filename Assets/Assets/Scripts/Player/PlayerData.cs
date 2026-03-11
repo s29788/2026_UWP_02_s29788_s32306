@@ -3,7 +3,7 @@ using System;
 namespace Player
 {
     [Serializable] 
-    public class PlayerData
+    public class PlayerData : MonoBehaviour
     {
         [SerializeField] private int score;
         [SerializeField] private int hp;
