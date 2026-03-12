@@ -72,6 +72,8 @@ mono_crash.*
 *.unitypackage
 *.unitypackage.meta
 *.app
+*.idea
+.idea
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -94,6 +96,42 @@ InitTestScene*.unity*
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+# --- Unity ---
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]serSettings/
 
+# Ignoruj pliki Asset Store (chyba że chcesz je wersjonować)
+/Assets/AssetStoreTools*
+
+# Ignoruj wygenerowane pliki Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/[Ll]ink.xml
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/[Uu]nity[Ee]ditor[Dd]ata
+
+# --- Rider / IntelliJ / Visual Studio ---
+.idea/
+*.sln
+*.csproj
+*.unityproj
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.polyql
+*.vismat
+.vs/
+
+# --- Systemowe ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Crashlytics ---
+crashlytics-build.properties
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
